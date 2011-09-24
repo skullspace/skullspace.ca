@@ -63,6 +63,8 @@ body{
   background: white;
   margin: 2em auto;
   padding: 10px  20px 20px 20px;
+	font-size: 14px;
+	line-height: 24px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -87,6 +89,19 @@ h5 {
 }
 h6 {
 	font-size:50%;
+}
+
+p{
+  margin-bottom: 1em;
+}
+
+ol, ul {
+	margin-left: 2em;
+	margin-bottom: 1em;
+}
+
+ul {
+	list-style:square;
 }
 
 .wrapper{
@@ -114,11 +129,6 @@ h1#logo{
 #site-title a:hover, #site-title:active, #site-title:visited{
   color: black;
 }
-p{
-  margin-bottom: 2em;
-  font-size: 16px;
-  line-height: 24px;
-}
 #twitter_feed{
   width: 500px;
 }
@@ -135,9 +145,10 @@ p{
 #flickr_feed{
   width: 375px;
   float : right;
-  height: 310px;
+  height: 322px;
   padding: 5px;
   margin:  5px;
+	margin-bottom:1em;
   background: black;
           box-shadow: 0px 0px 5px black;
   -webkit-box-shadow: 0px 0px 5px black;
@@ -184,6 +195,7 @@ ul#main-nav {
   list-style: none;
   height: 30px;
   background: black;
+	margin-right:2em;
 }
 
 ul#main-nav li {
