@@ -1,10 +1,11 @@
 function jsonFlickrApi(data){
   $.each(data.photos.photo.slice(0,20),function(i,photo){
     var src= "http://farm"+photo.farm+".static.flickr.com/"+photo.server+"/"+photo.id+"_"+photo.secret+"_s.jpg",
+    url = 'http://www.flickr.com/photos/skullspace/'+photo.id,
     img = new Image();
     img.src = src;
     window.img= img;
-    $("#flickr_feed").append("<img src='"+src+"'/>");
+    $("#flickr_feed").append("<a href="+url+"><img src='"+src+"'/></a>");
   });
 }
 

@@ -1,0 +1,8 @@
+todo
+  - favicon
+  - fork it on github (pull requests welcome)
+
+wish
+  - network menu
+    - assentworks
+    - skullspace

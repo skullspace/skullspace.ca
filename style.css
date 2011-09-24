@@ -137,6 +137,7 @@ h1#logo{
 }
 #flickr{
   width: 420px;
+  margin: 0 0 2em 2em;
   float: right;
 }
 #flickr a{
@@ -145,7 +146,7 @@ h1#logo{
 #flickr_feed{
   width: 375px;
   float : right;
-  height: 322px;
+  height: 300px;
   padding: 5px;
   margin:  5px;
 	margin-bottom:1em;
@@ -154,9 +155,14 @@ h1#logo{
   -webkit-box-shadow: 0px 0px 5px black;
      -moz-box-shadow: 0px 0px 5px black;
 }
+#flickr_feed a{
+  cursor: pointer;
+}
 #flickr_feed img{
   margin:  0;
   padding: 0;
+  float: left;
+  cursor: pointer;
   -webkit-transition-duration: 0.2s;
      -moz-transition-duration: 0.2s;
        -o-transition-duration: 0.2s;
@@ -170,6 +176,7 @@ h1#logo{
   -webkit-box-shadow: 0px 0px 5px black;
      -moz-box-shadow: 0px 0px 5px black;
   z-index:2;
+  cursor: pointer;
 }
 .clear{
   clear:both;
