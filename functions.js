@@ -50,7 +50,7 @@ $(function(){
       var element = $(this),
       overlay = element.overlay().getOverlay();
 
-      //overlay.empty();
+      overlay.empty();
 
     })
 
