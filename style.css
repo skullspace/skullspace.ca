@@ -47,6 +47,10 @@ q:before, q:after {
     border-spacing:       0;
   }
 
+/*								   */
+/* Theme starts here */
+/*									 */
+
 html{
   background: #F1F1F1;
   font-size: 16px;
@@ -60,6 +64,31 @@ body{
   margin: 2em auto;
   padding: 10px  20px 20px 20px;
 }
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:bold;
+	margin-bottom:1em;
+}
+
+h1 {
+	font-size:200%;
+}
+h2 {
+	font-size:150%;
+}
+h3 {
+	font-size:125%;
+}
+h4 {
+	font-size:100%;
+}
+h5 {
+	font-size:75%;
+}
+h6 {
+	font-size:50%;
+}
+
 .wrapper{
   margin: 0 2em;
 }
