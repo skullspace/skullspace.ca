@@ -226,3 +226,9 @@ ul#main-nav li a:hover {
   color: white;
 }
 
+
+#video-overlay {
+  height: 500px;
+  width: 500px;
+  border: none;
+}

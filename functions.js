@@ -26,7 +26,7 @@ $(function(){
   $.getJSON("http://vimeo.com/api/v2/skullspace/videos.json?callback=?",function(data){
     $.each(data.reverse().slice(0,5),function(i,item){
       $('#vimeo_feed').append('<div>'+
-          '<img rel="#mies1" width="150" height="100"'+
+          '<img rel="#video-overlay" width="150" height="100"'+
           'src="'              + item.thumbnail_medium + '"'+
           ' data-mobile-url="' + item.mobile_url +'"' +
           ' data-title="'      + item.title + '"' +
@@ -39,20 +39,25 @@ $(function(){
           item.upload_date + '</cite>'+
           '</div>');
     });
-    $('img[rel]').overlay();
-    $("img[rel]").bind('onLoad',function(e){
-      var element = $(this),
-          overlay = element.overlay().getOverlay(),
-          id      = element.data('id'); // this is undefined. 'data' is an array or a list...
-          console.log(element);
-      overlay.html("<iframe src='http://player.vimeo.com/video/"+ id +"' width='500' height='500' frameborder='0'></iframe>");
-    }).bind('onClose',function(e){
-      var element = $(this),
-      overlay = element.overlay().getOverlay();
+    $('img[rel]').overlay({
+      mask: {
+        color:     'black',
+        loadSpeed: 200,
+        opacity:   0.7
+      }
+    });
+  });
+  $("img[rel]").live('onLoad',function(e){
+    var element = $(this),
+        overlay = element.data('overlay').getOverlay(),
+        id      = element.data('id'); // this is undefined. 'data' is an array or a list...
+        console.log(element);
+    overlay.html("<iframe src='http://player.vimeo.com/video/"+ id +"' width='500' height='500' frameborder='0'></iframe>");
+  }).live('onClose',function(e){
+    var element = $(this),
+    overlay = element.data('overlay').getOverlay();
 
-      overlay.empty();
-
-    })
+    overlay.empty();
 
   });
 });
