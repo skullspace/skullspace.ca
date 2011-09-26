@@ -1,6 +1,6 @@
 todo
-  - favicon
-  - fork it on github (pull requests welcome)
+	- change photos to open up as large preview similar to vimeo links
+		- add previous/next functionality (maybe with thumbnails)
 
 wish
   - network menu
