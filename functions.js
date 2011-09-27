@@ -11,7 +11,7 @@ function jsonFlickrApi(data){
 
 $(function(){
   // twitter
-  $.getJSON("http://twitter.com/statuses/user_timeline.json?screen_name=skullspacewpg&count=10&callback=?",
+  $.getJSON("http://twitter.com/statuses/user_timeline.json?screen_name=skullspacewpg&count=8&callback=?",
   function(data){
     $.each(data, function(i,item){
       $("#twitter_feed ul").append("<li>"+item.text+"</li>");
