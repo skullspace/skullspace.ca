@@ -91,6 +91,11 @@ h6 {
 	font-size:50%;
 }
 
+a:link {color:#E96500;}
+a:visited {color:#984200;}
+a:hover {color:#FF6F00;}
+a:active {color:#E09B67;}
+
 p{
   margin-bottom: 1em;
 }
