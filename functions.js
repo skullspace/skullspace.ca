@@ -10,6 +10,10 @@ function jsonFlickrApi(data){
 }
 
 $(function(){
+
+  // tabmenu
+  $('#menu').tabify();
+
   // twitter
   $.getJSON("http://twitter.com/statuses/user_timeline.json?screen_name=skullspacewpg&count=8&callback=?",
   function(data){
@@ -18,25 +22,26 @@ $(function(){
     });
   });
 
-  //flickr
+  // flickr
   var url = 'http://api.flickr.com/services/rest/?format=json&method=flickr.photos.search&api_key=5b1e087229399735670b25418d55dd0f&user_id=58435337@N05&callback=?';
 
   $.getJSON(url);
 
+  // vimeo
   $.getJSON("http://vimeo.com/api/v2/skullspace/videos.json?callback=?",function(data){
     $.each(data.reverse().slice(0,5),function(i,item){
-      $('#vimeo_feed').append('<div>'+
-          '<img rel="#video-overlay" width="150" height="100"'+
-          'src="'              + item.thumbnail_medium + '"'+
+      $('#vimeo_feed').append('<div>' +
+          '<img rel="#video-overlay" width="150" height="100"' +
+          'src="'              + item.thumbnail_medium + '"' +
           ' data-mobile-url="' + item.mobile_url +'"' +
           ' data-title="'      + item.title + '"' +
-          ' data-upload-date="'+ item.upload_date + '"'+
-          ' data-id="'          + item.id + '"'+
-          '/>'+
-          '<a href="'+
+          ' data-upload-date="'+ item.upload_date + '"' +
+          ' data-id="'          + item.id + '"' +
+          '/><br />' +
+          '<a href="' +
           item.mobile_url  + '">' +
-          item.title       + '</a><cite>'+
-          item.upload_date + '</cite>'+
+          item.title       + '</a><br />' +
+          item.upload_date.replace(/ .*/g, '') +
           '</div>');
     });
     $('img[rel]').overlay({
@@ -50,7 +55,7 @@ $(function(){
   $("img[rel]").live('onLoad',function(e){
     var element = $(this),
         overlay = element.data('overlay').getOverlay(),
-        id      = element.data('id'); // this is undefined. 'data' is an array or a list...
+        id      = element.data('id');
         console.log(element);
     overlay.html("<iframe src='http://player.vimeo.com/video/"+ id +"' width='500' height='500' frameborder='0'></iframe>");
   }).live('onClose',function(e){

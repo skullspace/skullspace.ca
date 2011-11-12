@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="style.css" />
     <link rel="icon" type="image/ico" href="favicon.ico">
     <script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+    <script src="jquery.tabify.js"></script>
     <script src="functions.js"></script>
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <style type="text/css">
@@ -39,6 +40,24 @@
         height:35px;
         width:35px;
       }
+      #sidebar { 
+        padding-left: 1em;
+        border-left: 1px solid #DDD;
+        width: 333px;
+        float: right; 
+      }
+      .menu { padding: 0; clear: both; }
+      .menu li { display: inline;  }
+      .menu li a { 
+        padding: 10px; 
+        float: left; 
+        border: 1px solid #CCC; 
+        text-decoration: none; 
+        font-weight: bold;
+        color: #000;
+      }
+      .menu li.active a { background: #EEE; }
+      .tab_content { float: left; clear: both; padding: 10px 20px 20px; } 
     </style>
   </head>
   <body>
@@ -58,31 +77,43 @@
       <br class="clear"/>
     </div>
     <div class="wrapper">
-      <div id="flickr">
-        <div id="flickr_feed">
+      <div id="sidebar">
+        <h2>Feeds</h2>
+        <ul id="menu" class="menu">
+          <li class="active"><a href="#flickr">Flickr</a></li>
+          <li><a href="#twitter">Twitter</a></li>
+          <li><a href="#vimeo">Vimeo</a></li>
+        </ul>
+        <div id="flickr" class="tab_content">
+          <a href="http://www.skullspace.ca/wiki/index.php/Flickr">More Pictures on <img src="flickr.png" alt="Flickr Logo" /></a>
+          <br class="clear"/>
+          <div id="flickr_feed"></div>
         </div>
-        <a href="http://www.skullspace.ca/wiki/index.php/Flickr">More Pictures on <img src="flickr.png" alt="Flickr Logo" /></a>
+        <div id="twitter" class="tab_content">
+          <a href="http://www.twitter.com/SkullSpaceWpg"><img src="http://twitter-badges.s3.amazonaws.com/follow_us-a.png" alt="Follow SkullSpace on Twitter"/></a>
+          <div id="twitter_feed">
+            <ul></ul>
+          </div>
+        </div>
+        <div id="vimeo" class="tab_content">
+          <a href="http://vimeo.com/skullspace">More Videos on Vimeo...</a>
+          <div id="vimeo_feed"></div>
+        </div>
       </div>
+
       <div id="who-we-are">
 			  <h2>Who we are</h2>
         <p>SkullSpace is a recently-founded hackerspace in Winnipeg. SkullSpace is a place for hackers, builders, programmers, artists and anybody interested in how stuff works to gather in a common place and help focus their knowledge and creativity.</p>
 			  <h2>How to join</h2>
         <p>If you're interested in checking us out, or joining up, come check out one of our weekly meetings! They're Tuesdays at 6:00pm at our space (125 Adelaide St). We're also open Friday evenings, the third Saturday of each month, and throughout the week. See our <a href='http://www.skullspace.ca/calendar'>calendar</a> for more information. You can also visit us on IRC - #SkullSpace on irc.freenode.com.</p>
-				<p>We also encourage everybody to subscribe to our <a href='http://www.skullspace.ca/wiki/index.php/Mailing_List'>Mailing lists</a>, <a href='https://www.facebook.com/SkullSpaceWpg'>Facebook</a>, and <a href='https://twitter.com/SkullSpaceWpg'>Twitter</a> - that's where you'll get up-to-the minute news! 
+        <p>We also encourage everybody to subscribe to our <a href='http://www.skullspace.ca/wiki/index.php/Mailing_List'>Mailing lists</a>, <a href='https://www.facebook.com/SkullSpaceWpg'>Facebook</a>, and <a href='https://twitter.com/SkullSpaceWpg'>Twitter</a> - that's where you'll get up-to-the minute news! 
         <p>If you think you're interested, fill out the required <a href='http://www.skullspace.ca/wiki/index.php/Category:Paperwork'>Paperwork</a> and come to a Tuesday meeting.</p>
-        <p>For more information, see our <a href='http://www.skullspace.ca/wiki'>wiki</a></p>
-      </div>
-      <div id="twitter_feed">
-        <ul></ul>
-      </div>
-      <br class="clear"/>
-      <div id="vimeo">
-        <div id="vimeo_feed">
-        </div>
-        <a href="http://vimeo.com/skullspace">More Videos...</a>
+        <p>For more information, see our <a href='http://www.skullspace.ca/wiki'>wiki</a>.</p>
+        <h2>Where we are</h2>
+        <div id="map_canvas" style="width:400px;height:300px"></div>
+        <p><a href="http://maps.google.ca/maps?q=125+Adelaide+Street,+Winnipeg,+Manitoba&amp;hl=en&amp;sll=49.891235,-97.15369&amp;sspn=35.893858,93.076172&amp;vpsrc=0&amp;hnear=125+Adelaide+St,+Winnipeg,+Division+No.+11,+Manitoba+R3A+0H7&amp;t=m&amp;z=16">Floor 3, 125 Adelaide Street, Winnipeg MB</a></p>
       </div>
       <br class="clear"/>
-      <div id="map_canvas" style="width:400px;height:300px"></div>
       <div id="wiki_feed">
       </div>
       <div id="blog_feed">

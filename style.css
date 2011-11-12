@@ -132,7 +132,7 @@ h1#logo{
 #site-title a{
   text-decoration: none;
   color: black;
-  font-weight: bold
+  font-weight: bold;
   font-family: 'Helvetica Neue', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
 
 }
@@ -147,27 +147,22 @@ h1#logo{
 
 #twitter_feed ul{
   list-style: none;
+  margin:0;
 }
 #twitter_feed li{
-  margin:  0.5em;
+  margin: 0.5em 0;
   padding-bottom: 0.5em;
-  border-bottom: 1px dashed #eee;
+  border-bottom: 1px dashed #DDD;
 }
 #who-we-are {
-  width: 250px;
+  width: 515px;
   float: left;
 }
 #flickr{
   width: 300px;
-  margin: 0 0 2em 0em;
-  float: right;
-}
-#flickr a{
-  float: right;
 }
 #flickr_feed{
   width: 300px;
-  float : right;
   height: 375px;
   padding: 5px;
   margin:  5px;
@@ -204,20 +199,18 @@ h1#logo{
   clear:both;
 }
 
-#vimeo {
-  margin: 4em 0px;
-  height: 160px;
-}
-
-#vimeo a{
-  float: right
-}
-
 #vimeo_feed div{
-  width: 150px;
-  font-size: 10px;
-  float: left;
-  margin: 1em 10px
+  width: 313px;
+  font-size: small;
+  margin: 0.5em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  border-bottom: 1px dashed #DDD;
+}
+
+#vimeo_feed div img {
+  cursor: pointer;
+  border: 1px solid #333;
 }
 
 ul#main-nav {
