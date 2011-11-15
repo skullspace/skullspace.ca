@@ -150,9 +150,11 @@ h1#logo{
   margin:0;
 }
 #twitter_feed li{
-  margin: 0.5em 0;
-  padding-bottom: 0.5em;
+  padding: 2em;
   border-bottom: 1px dashed #DDD;
+}
+#twitter_feed li:hover {
+  background-color: #F8F8F8;
 }
 #who-we-are {
   width: 515px;
@@ -200,12 +202,13 @@ h1#logo{
 }
 
 #vimeo_feed div{
-  width: 313px;
   font-size: small;
-  margin: 0.5em;
-  padding-bottom: 0.5em;
-  padding-top: 0.5em;
+  padding: 1em;
   border-bottom: 1px dashed #DDD;
+}
+
+#vimeo_feed div:hover {
+  background-color: #F8F8F8;
 }
 
 #vimeo_feed div img {
