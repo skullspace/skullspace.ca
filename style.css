@@ -320,3 +320,76 @@ a#join-now:active {
   -webkit-box-shadow: none;
   text-shadow: none;
 }
+
+/* the overlayed element */
+.simple_overlay {
+
+  /* must be initially hidden */
+  display:none;
+
+  /* place overlay on top of other elements */
+  z-index:10000;
+
+  /* styling */
+  background-color:#333;
+
+  width: 690px;
+  width: 500px;
+  border:1px solid #666;
+
+  /* CSS3 styling for latest browsers */
+  -moz-box-shadow:0 0 90px 5px #000;
+  -webkit-box-shadow: 0 0 90px #000;
+}
+
+/* close button positioned on upper right corner */
+.simple_overlay .close {
+  background-image:url(img/overlay/close.png);
+  position:absolute;
+  right:-15px;
+  top:-15px;
+  cursor:pointer;
+  height:35px;
+  width:35px;
+}
+#sidebar {
+  padding-left: 1em;
+  border-left: 1px solid #DDD;
+  width: 333px;
+  float: right;
+}
+.menu {
+  padding: 0;
+  clear: both;
+  margin:0;
+}
+.menu li { display: inline;  }
+.menu li a {
+  background: #EEE;
+  float: left;
+  border: 1px solid #CCC;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  width: 100px;
+  text-align: center;
+}
+.menu li a:hover {
+  background: white;
+}
+.menu li.active a {
+  border-bottom: none;
+  background: white;
+  margin-top: -3px;
+  padding-top: 3px;
+}
+.tab_content {
+  float: left;
+  clear: both;
+  padding: 10px 20px 20px;
+}
+
+.menu li a span.count{
+  color: #D3D3D3;
+  font-size: 10px;
+}
