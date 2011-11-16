@@ -40,24 +40,47 @@
         height:35px;
         width:35px;
       }
-      #sidebar { 
+      #sidebar {
         padding-left: 1em;
         border-left: 1px solid #DDD;
         width: 333px;
-        float: right; 
+        float: right;
       }
-      .menu { padding: 0; clear: both; }
+      .menu {
+        padding: 0;
+        clear: both;
+        margin:0;
+      }
       .menu li { display: inline;  }
-      .menu li a { 
-        padding: 0 2em;
-        float: left; 
-        border: 1px solid #CCC; 
-        text-decoration: none; 
+      .menu li a {
+        background: #EEE;
+        float: left;
+        border: 1px solid #CCC;
+        text-decoration: none;
         font-weight: bold;
         color: #000;
+        width: 100px;
+        text-align: center;
       }
-      .menu li.active a { background: #EEE; }
-      .tab_content { float: left; clear: both; padding: 10px 20px 20px; } 
+      .menu li a:hover {
+        background: white;
+      }
+      .menu li.active a {
+        border-bottom: none;
+        background: white;
+        margin-top: -3px;
+        padding-top: 3px;
+      }
+      .tab_content {
+        float: left;
+        clear: both;
+        padding: 10px 20px 20px;
+      }
+
+      .menu li a span.count{
+        color: #D3D3D3;
+        font-size: 10px;
+      }
     </style>
   </head>
   <body>
@@ -79,19 +102,18 @@
     <div class="wrapper">
       <div id="sidebar">
         <ul id="menu" class="menu">
-          <li class="active"><a href="#flickr">Flickr</a></li>
-          <li><a href="#twitter">Twitter</a></li>
-          <li><a href="#vimeo">Vimeo</a></li>
+          <li class="active"><a href="#flickr">Flickr<span class='count'> (20)</span></a></li>
+          <li><a href="#twitter">Twitter<span class='count'> (8)</span></a></li>
+          <li><a href="#vimeo">Vimeo<span class='count'> (8)</span></a></li>
         </ul>
         <div id="flickr" class="tab_content">
           <h3>Flickr Feed</h3>
-          <a href="http://www.skullspace.ca/wiki/index.php/Flickr">More Pictures on <img src="flickr.png" alt="Flickr Logo" /></a>
-          <br class="clear"/>
           <div id="flickr_feed"></div>
+          <a href="http://www.skullspace.ca/wiki/index.php/Flickr">More Pictures on <img src="flickr.png" alt="Flickr Logo" /></a>
         </div>
         <div id="twitter" class="tab_content">
           <h3>Twitter Feed</h3>
-          <a href="http://www.twitter.com/SkullSpaceWpg"><img src="http://twitter-badges.s4.amazonaws.com/follow_us-a.png" alt="Follow SkullSpace on Twitter"/></a>
+          <a href="http://www.twitter.com/skullspacewpg"><img src="img/follow_us-a.png" alt="Follow SkullSpace on Twitter"/></a>
           <div id="twitter_feed">
             <ul></ul>
           </div>
@@ -104,11 +126,11 @@
       </div>
 
       <div id="who-we-are">
-			  <h2>Who we are</h2>
+        <h2>Who we are</h2>
         <p>SkullSpace is a recently-founded hackerspace in Winnipeg. SkullSpace is a place for hackers, builders, programmers, artists and anybody interested in how stuff works to gather in a common place and help focus their knowledge and creativity.</p>
-			  <h2>How to join</h2>
+        <h2>How to join</h2>
         <p>If you're interested in checking us out, or joining up, come check out one of our weekly meetings! They're Tuesdays at 6:00pm at our space (125 Adelaide St). We're also open Friday evenings, the third Saturday of each month, and throughout the week. See our <a href='http://www.skullspace.ca/calendar'>calendar</a> for more information. You can also visit us on IRC - #SkullSpace on irc.freenode.com.</p>
-        <p>We also encourage everybody to subscribe to our <a href='http://www.skullspace.ca/wiki/index.php/Mailing_List'>Mailing lists</a>, <a href='https://www.facebook.com/SkullSpaceWpg'>Facebook</a>, and <a href='https://twitter.com/SkullSpaceWpg'>Twitter</a> - that's where you'll get up-to-the minute news! 
+        <p>We also encourage everybody to subscribe to our <a href='http://www.skullspace.ca/wiki/index.php/Mailing_List'>Mailing lists</a>, <a href='https://www.facebook.com/SkullSpaceWpg'>Facebook</a>, and <a href='https://twitter.com/SkullSpaceWpg'>Twitter</a> - that's where you'll get up-to-the minute news!
         <p>If you think you're interested, fill out the required <a href='http://www.skullspace.ca/wiki/index.php/Category:Paperwork'>Paperwork</a> and come to a Tuesday meeting.</p>
         <p>For more information, see our <a href='http://www.skullspace.ca/wiki'>wiki</a>.</p>
         <h2>Where we are</h2>

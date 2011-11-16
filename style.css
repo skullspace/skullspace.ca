@@ -150,7 +150,7 @@ h1#logo{
   margin:0;
 }
 #twitter_feed li{
-  padding: 2em;
+  padding: 1em 0em;
   border-bottom: 1px dashed #DDD;
 }
 #twitter_feed li:hover {
