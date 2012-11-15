@@ -15,7 +15,7 @@ $(function(){
   $('#menu').tabify();
 
   // twitter
-  $.getJSON("http://twitter.com/statuses/user_timeline.json?screen_name=skullspacewpg&count=8&callback=?",
+  $.getJSON("https://api.twitter.com/1/statuses/user_timeline.json?screen_name=skullspacewpg&count=8&callback=?",
   function(data){
     $.each(data, function(i,item){
       $("#twitter_feed ul").append("<li>"+item.text.replace(/(https?:\/\/([-\w\.]+)+(:\d+)?(\/([\w\/_\.]*(\?\S+)?)?)?)/g, "<a href='$1'>$1</a>")+"</li>");
