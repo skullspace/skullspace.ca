@@ -68,7 +68,7 @@ $(function(){
 });
 
 $(function(){
-  var latlng = new google.maps.LatLng(49.899669,-97.142344),
+  var latlng = new google.maps.LatLng(49.895960,-97.144287),
       myOptions = {
     zoom: 15,
     center: latlng,
