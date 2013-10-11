@@ -1,5 +1,23 @@
 <!doctype html>
 
 <script type="text/javascript">
-  alert(document.location.href);
+//  var loc = document.location.href;
+  var loc = "http://www.skullspace.ca/blog/blog.php?a=b";
+
+  alert(loc);
+  if(loc.indexOf("skullspace.ca/wiki") != -1)
+  {
+    loc = loc.replace(/.*skullspace.ca\/wiki/, "http://wiki.skullspace.ca");
+    alert(loc);
+  }
+  else if(loc.indexOf("skullspace.ca/blog") != -1)
+  {
+    loc = loc.replace(/.*skullspace.ca\/blog/, "http://blog.skullspace.ca");
+    alert(loc);
+  }
+  else
+  {
+    document.write("Page not found.");
+  }
 </script>
+
