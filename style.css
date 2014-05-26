@@ -402,17 +402,26 @@ a#join-now:active {
   font-size: 10px;
 }
 
-.sponsors {
+.sponsors{
+  display:block;
   margin-top: 25px;
-  text-align: center;
-  padding: 0 28px;
+  padding: 5px 25px 25px 25px;
+  border-radius:8px;
+
+  background-color: #fafafa;
 }
 
-.sponsors div {
-  border-top: 1px solid rgba(51, 51, 51, 0.66);
-  padding-top: 5px;
+.sponsors > a{
+  display:inline-block;
+  vertical-align: middle;
 }
 
-.sponsors img {
-  vertical-align: center;
+.block-children{
+  display:inline-block;
+  vertical-align: middle;
 }
+
+.block-children > a{
+ display:block;
+}
+
