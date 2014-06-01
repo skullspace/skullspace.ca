@@ -29,7 +29,7 @@ $(function(){
 
   // vimeo
   $.getJSON("http://vimeo.com/api/v2/skullspace/videos.json?callback=?",function(data){
-    $.each(data.reverse().slice(0,5),function(i,item){
+    $.each(data.slice(0,5),function(i,item){
       $('#vimeo_feed').append('<div>' +
           '<img rel="#video-overlay" width="150" height="100"' +
           'src="'              + item.thumbnail_medium + '"' +
