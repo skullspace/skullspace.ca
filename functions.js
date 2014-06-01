@@ -23,7 +23,7 @@ $(function(){
   });
 
   // flickr
-  var url = 'https://api.flickr.com/services/rest/?format=json&method=flickr.photos.search&api_key=5b1e087229399735670b25418d55dd0f&user_id=58435337@N05&callback=?';
+  var url = 'https://api.flickr.com/services/rest/?format=json&method=flickr.photos.search&tags=GoodPhoto&api_key=5b1e087229399735670b25418d55dd0f&user_id=58435337@N05&callback=?';
 
   $.getJSON(url);
 
